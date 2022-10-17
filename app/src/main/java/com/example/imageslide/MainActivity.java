@@ -1,13 +1,17 @@
 package com.example.imageslide;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -15,14 +19,15 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ImageSlider imageSlider;
-
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    androidx.appcompat.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.setTitle("ICT INFO");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.meterial_deep_blue)));
+
 
         imageSlider = (ImageSlider) findViewById(R.id.imgSlider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();
@@ -31,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.img_3, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
 
+        // Slide Menu
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
+        navigationView = (NavigationView) findViewById(R.id.navigatioID);
+        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarID);
+        setSupportActionBar(toolbar);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
     }
 }

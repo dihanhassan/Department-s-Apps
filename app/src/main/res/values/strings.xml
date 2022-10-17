@@ -10,5 +10,21 @@
     <string name="opt_8">BLOOD</string>
     <string name="opt_9">ABOUT</string>
 
+    <string name="menu_1">Home</string>
+    <string name="menu_2">Bus schedule</string>
+    <string name="menu_3">Class routine</string>
+    <string name="menu_4">Students info</string>
+    <string name="menu_5">Teachers info</string>
+    <string name="menu_6">Stuffs info</string>
+    <string name="menu_7">Blood bank</string>
+    <string name="menu_8">Contact us</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="information">INFORMATION</string>
+    <string name="emergency">EMERGENCY</string>
+    <string name="aboutUs">About us</string>
+
+
+    <string name="navigration_open">Open Navigation drawer</string>
+    <string name="navigration_close">Close Navigation drawer</string>
 
 </resources>
