@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#fcfcfc</color>
+    <color name="meterial_deep_purple">#673AB7</color>
+    <color name="meterial_pink">#E91E63</color>
+
+
+    <color name="meterial_cyan">#00bcd4</color>
+    <color name="meterial_orange">#ff5722</color>
+    <color name="meterial_ash">#566c8c</color>
+    <color name="meterial_red">#ce0004</color>
+    <color name="meterial_blue">#006978</color>
+    <color name="meterial_green">#757575</color>
+    <color name="meterial_deep_blue">#6200ea</color>
 </resources>

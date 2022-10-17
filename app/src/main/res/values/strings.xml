@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ImageSlide</string>
+    <string name="opt_1">BUSS</string>
+    <string name="opt_2">CLASS</string>
+    <string name="opt_3">NOTICE</string>
+    <string name="opt_4">STUDENT</string>
+    <string name="opt_5">TEACHER</string>
+    <string name="opt_6">STUFF</string>
+    <string name="opt_7">UPDATE</string>
+    <string name="opt_8">BLOOD</string>
+    <string name="opt_9">ABOUT</string>
+
+
 </resources>
