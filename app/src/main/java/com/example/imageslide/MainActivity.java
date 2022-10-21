@@ -2,10 +2,14 @@ package com.example.imageslide;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toolbar;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     androidx.appcompat.widget.Toolbar toolbar;
+    CardView Bus;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +52,20 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        // card View optiosn
+        Bus = (CardView) findViewById(R.id.cardViewBussID);
+
+
+    }
+    public  void optinons_menu(View view){
+        Intent intent;
+        if (view.getId()==R.id.cardViewBussID){
+            intent = new Intent(MainActivity.this,BussSchedule.class);
+            startActivity(intent);
+        }
+        if(view.getId()==R.id.cardViewClassID){
+            intent = new Intent(MainActivity.this,classRoutine.class);
+            startActivity(intent);
+        }
     }
 }
