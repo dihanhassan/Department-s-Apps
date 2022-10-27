@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     androidx.appcompat.widget.Toolbar toolbar;
-    CardView Bus;
+    CardView Bus,Teacher;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         // card View optiosn
         Bus = (CardView) findViewById(R.id.cardViewBussID);
+        Teacher = (CardView) findViewById(R.id.cardViewTeacherId);
 
 
     }
@@ -65,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         }
         if(view.getId()==R.id.cardViewClassID){
             intent = new Intent(MainActivity.this,classRoutine.class);
+            startActivity(intent);
+        }
+        if (view.getId()==R.id.cardViewTeacherId){
+            intent = new Intent(MainActivity.this,TeacherInfo.class);
             startActivity(intent);
         }
     }

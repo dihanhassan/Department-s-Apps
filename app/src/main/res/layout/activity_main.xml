@@ -300,7 +300,8 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="5dp"
                 app:cardBackgroundColor="@color/meterial_cyan"
-
+                android:id="@+id/cardViewTeacherId"
+                android:onClick="optinons_menu"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
