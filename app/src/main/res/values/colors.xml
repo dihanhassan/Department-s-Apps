@@ -15,8 +15,24 @@
     <color name="meterial_cyan">#00bcd4</color>
     <color name="meterial_orange">#ff5722</color>
     <color name="meterial_ash">#566c8c</color>
-    <color name="meterial_red">#ce0004</color>
+    <color name="meterial_red">#8F878D</color>
     <color name="meterial_blue">#006978</color>
     <color name="meterial_green">#757575</color>
     <color name="meterial_deep_blue">#6200ea</color>
+
+
+
+    <color name="colorPrimary">#536DFE</color>
+    <color name="colorPrimaryDark">#536DFE</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorAccent">#F44336</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="red">#E80909</color>
+
+
+
+
+
 </resources>

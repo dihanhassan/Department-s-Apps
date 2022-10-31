@@ -5,7 +5,7 @@
     <string name="opt_3">NOTICE</string>
     <string name="opt_4">STUDENT</string>
     <string name="opt_5">TEACHER</string>
-    <string name="opt_6">STUFF</string>
+    <string name="opt_6">STAFF</string>
     <string name="opt_7">UPDATE</string>
     <string name="opt_8">BLOOD</string>
     <string name="opt_9">ABOUT</string>
@@ -37,5 +37,15 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_send_msg">We will send you an one time password on this mobile number</string>
+    <string name="warning">Warning:: Uses Permission Only For ICT Students</string>
+    <string name="input_mobile">Enter Mobile Number</string>
+    <string name="enter_the_otp_sent_to">Enter the OTP sent to</string>
+    <string name="don_t_receive_the_otp">Don\'t receive The OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="verify">Verify</string>
 
 </resources>
