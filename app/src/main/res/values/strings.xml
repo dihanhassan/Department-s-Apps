@@ -47,5 +47,7 @@
     <string name="don_t_receive_the_otp">Don\'t receive The OTP?</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="verify">Verify</string>
+    <string name="_1st_batch">1st Batch</string>
+    <string name="season_ex_2018_19">Season [Ex. 2018-19]</string>
 
 </resources>

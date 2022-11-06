@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,6 +25,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.navigation.NavigationView;
+import com.onesignal.OneSignal;
 
 import java.util.ArrayList;
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity  {
     androidx.appcompat.widget.Toolbar toolbar;
     CardView Bus,Teacher;
 
-
+    private static final String ONESIGNAL_APP_ID = "0dc45e20-8423-40e8-8a7f-9e0c54770757";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,7 +46,16 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Setup Notification for my Apps
 
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
+        OneSignal.promptForPushNotifications();
+        //---------------------------------------------------------------------------
 
         // One time otp
         SharedPreferences preferences = getSharedPreferences("PREFERENCE",MODE_PRIVATE);
@@ -117,7 +128,13 @@ public class MainActivity extends AppCompatActivity  {
             intent = new Intent(MainActivity.this,StaffInfo.class);
             startActivity(intent);
         }
+        if(view.getId()==R.id.cardViewStudentID){
+            intent = new Intent(MainActivity.this,afterStudent.class);
+            startActivity(intent);
+        }
+        if (view.getId()==R.id.cardViewBloodAboutID){
 
+        }
 
     }
 

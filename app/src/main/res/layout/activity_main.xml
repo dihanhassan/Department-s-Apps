@@ -252,6 +252,8 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="5dp"
                 app:cardBackgroundColor="@color/meterial_ash"
+                android:id="@+id/cardViewStudentID"
+                android:onClick="optinons_menu"
 
                 >
                 <LinearLayout
@@ -509,6 +511,9 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="5dp"
                 app:cardBackgroundColor="@color/meterial_green"
+                android:onClick="optinons_menu"
+                android:id="@+id/cardViewBloodAboutID"
+
 
                 >
                 <LinearLayout
