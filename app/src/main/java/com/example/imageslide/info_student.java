@@ -162,120 +162,137 @@ public class info_student extends AppCompatActivity {
 
 
 
-                switch (Season){
-                    case "2020-21":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2020-21");
-                        break;
+                if (    Name.isEmpty() ||
+                        Id.isEmpty()   ||
+                        Season.isEmpty() ||
+                        Mobile.isEmpty() ||
+                        Email.isEmpty()  ||
+                        HomeTown.isEmpty() ||
+                        Service.isEmpty() ||
+                        Blood.isEmpty()
+                )   {
+                    Toast.makeText(info_student.this, "Incorrect Information . Try Again", Toast.LENGTH_SHORT).show();
 
-                    case "2019-20":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2019-20");
-                        break;
-                    case "2018-19":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2018-19");
-                        break;
-                    case "2017-18":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2017-18");
-                        break;
-                    case "2016-17":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2016-17");
-                        break;
 
-                    case "2015-16":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2015-16");
-                        break;
+                }else {
 
-                    case "2014-15":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2014-15");
-                        break;
-                    case "2013-14":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2013-14");
-                        break;
-                    case "2012-13":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2012-13");
-                        break;
-                    case "2011-12":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2011-12");
-                        break;
-                    case "2010-11":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2010-11");
-                        break;
+                    switch (Season) {
+                        case "2020-21":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2020-21");
+                            break;
 
-                    case "2009-10":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2009-10");
-                        break;
+                        case "2019-20":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2019-20");
+                            break;
+                        case "2018-19":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2018-19");
+                            break;
+                        case "2017-18":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2017-18");
+                            break;
+                        case "2016-17":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2016-17");
+                            break;
 
-                    case "2008-9":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2008-9");
-                        break;
+                        case "2015-16":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2015-16");
+                            break;
 
-                    case "2007-8":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2007-8");
-                        break;
-                    case "2006-7":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2006-7");
-                        break;
+                        case "2014-15":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2014-15");
+                            break;
+                        case "2013-14":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2013-14");
+                            break;
+                        case "2012-13":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2012-13");
+                            break;
+                        case "2011-12":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2011-12");
+                            break;
+                        case "2010-11":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2010-11");
+                            break;
 
-                    case "2005-6":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2005-6");
-                        break;
+                        case "2009-10":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2009-10");
+                            break;
 
-                    case "2004-5":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2004-5");
-                        break;
+                        case "2008-9":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2008-9");
+                            break;
 
-                    case "2003-4":
-                        databaseReference = FirebaseDatabase.getInstance().getReference("2003-4");
-                        break;
-                    default:
-                        databaseReference = FirebaseDatabase.getInstance().getReference("MissSeason");
+                        case "2007-8":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2007-8");
+                            break;
+                        case "2006-7":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2006-7");
+                            break;
 
+                        case "2005-6":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2005-6");
+                            break;
+
+                        case "2004-5":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2004-5");
+                            break;
+
+                        case "2003-4":
+                            databaseReference = FirebaseDatabase.getInstance().getReference("2003-4");
+                            break;
+                        default:
+                            databaseReference = FirebaseDatabase.getInstance().getReference("MissSeason");
+
+
+                    }
+
+
+                    dataholder info = new dataholder(Name, Id, Season, Mobile, Email, HomeTown, Service);
+
+                    databaseReference.child(Id).setValue(info);
+
+
+                    switch (Blood) {
+                        case "A+":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("A+");
+                            break;
+
+                        case "A-":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("A-");
+                            break;
+                        case "B+":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("B+");
+                            break;
+                        case "B-":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("B-");
+                            break;
+                        case "AB+":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("AB+");
+                            break;
+
+                        case "AB-":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("AB-");
+                            break;
+
+                        case "O+":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("O+");
+                            break;
+                        case "O-":
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("O-");
+                            break;
+
+                        default:
+                            databaseReference2 = FirebaseDatabase.getInstance().getReference("MissBlood");
+
+                    }
+
+                    dataHolderForBlood info2 = new dataHolderForBlood(Name, Id, Season, Mobile, Blood);
+
+                    databaseReference2.child(Id).setValue(info2);
+
+                    Toast.makeText(info_student.this, "Submited Successfully.", Toast.LENGTH_SHORT).show();
 
                 }
-
-
-
-                dataholder info = new dataholder(Name,Id,Season,Mobile,Email,HomeTown,Service);
-
-                databaseReference.child(Id).setValue(info);
-
-
-                switch (Blood){
-                    case "A+":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("A+");
-                        break;
-
-                    case "A-":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("A-");
-                        break;
-                    case "B+":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("B+");
-                        break;
-                    case "B-":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("B-");
-                        break;
-                    case "AB+":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("AB+");
-                        break;
-
-                    case "AB-":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("AB-");
-                        break;
-
-                    case "O+":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("O+");
-                        break;
-                    case "O-":
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("O-");
-                        break;
-
-                    default:
-                        databaseReference2 = FirebaseDatabase.getInstance().getReference("MissBlood");
-
-                }
-
-                dataHolderForBlood info2 = new dataHolderForBlood(Name,Id,Season,Mobile,Blood);
-
-                databaseReference2.child(Id).setValue(info2);
 
 
 
@@ -286,12 +303,6 @@ public class info_student extends AppCompatActivity {
                 email.setText("");
                 homeTown.setText("");
                 service.setText("");
-
-
-
-
-                Toast.makeText(info_student.this, "Submited Successfully.", Toast.LENGTH_SHORT).show();
-
 
 
 
