@@ -26,14 +26,7 @@ public class StaffInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_info);
 
-        // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutStaffInfoID);
-        navigationView = (NavigationView) findViewById(R.id.navigatioStaffInfoID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarStaffInfoID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
 
         // WebView

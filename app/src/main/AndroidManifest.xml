@@ -21,6 +21,13 @@
         android:theme="@style/Theme.ImageSlide"
         tools:targetApi="31">
         <activity
+            android:name=".showInfo2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".showInfo"
             android:exported="false">
             <meta-data

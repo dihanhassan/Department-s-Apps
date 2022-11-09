@@ -25,14 +25,7 @@ public class Apps_Update extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps_update);
 
-        // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutAppUpdateID);
-        navigationView = (NavigationView) findViewById(R.id.navigatioAppUptadeID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarAppUpdateID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
 
         // WebView

@@ -15,7 +15,7 @@ public class StudentInfo extends AppCompatActivity {
     }
 
     public void toolbarBack (View view){
-        Intent intent = new Intent(StudentInfo.this,MainActivity.class);
+        Intent intent = new Intent(StudentInfo.this,afterStudent.class);
         startActivity(intent);
     }
     public void showStudent (View view){

@@ -26,28 +26,15 @@ public class BussSchedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buss_schedule);
 
-        // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutBussID);
-        navigationView = (NavigationView) findViewById(R.id.navigatioBusID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarBusID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-
-
-
-
         // web View
         webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/bus.html");
-        imageButton = (ImageButton) findViewById(R.id.buss_back_btnID);
+        imageButton = (ImageButton) findViewById(R.id.BussBackID);
     }
     public void BussActivity(View view){
         Intent intent;
-        if (view.getId()== R.id.buss_back_btnID){
+        if (view.getId()== R.id.BussBackID){
             intent = new Intent(BussSchedule.this,MainActivity.class);
             startActivity(intent);
         }

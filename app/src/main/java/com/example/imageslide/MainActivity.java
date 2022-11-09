@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity  {
         // Slide Menu
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
-        navigationView = (NavigationView) findViewById(R.id.navigatioID);
+
         toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarID);
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);

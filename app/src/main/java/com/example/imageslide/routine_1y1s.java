@@ -24,14 +24,7 @@ public class routine_1y1s extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routine1y1s);
-        // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutr_1y2sID);
-        navigationView = (NavigationView) findViewById(R.id.navigatio_r1y2sID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBar_r1y2sID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
 
         // web view
@@ -42,7 +35,7 @@ public class routine_1y1s extends AppCompatActivity {
     }
     public void funShow (View view){
         Intent intent;
-        if (view.getId()==R.id.r1y1s_backID){
+        if (view.getId()==R.id.r1y1s_BackID){
             intent = new Intent(routine_1y1s.this,classRoutine.class);
             startActivity(intent);
         }

@@ -25,14 +25,7 @@ public class TeacherInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_info);
 
-        // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutTeacherInfoID);
-        navigationView = (NavigationView) findViewById(R.id.navigatioTeacherInfoID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarTeacherInfoID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
 
         // WebView

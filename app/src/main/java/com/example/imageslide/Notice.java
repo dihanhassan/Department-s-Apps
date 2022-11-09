@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
@@ -27,13 +29,7 @@ public class Notice extends AppCompatActivity {
         setContentView(R.layout.activity_notice);
 
         // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutr_Notice);
-        navigationView = (NavigationView) findViewById(R.id.navigatio_Notice);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBar_Notice);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
         // web Site notice View
 
@@ -41,6 +37,14 @@ public class Notice extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://ict.mbstu.ac.bd/notices/all");
+    }
+
+    public void NoticeActivity (View view){
+        Intent intent;
+        if (view.getId()==R.id.Notice_backID){
+            intent = new Intent(Notice.this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override

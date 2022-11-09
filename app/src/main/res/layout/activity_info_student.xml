@@ -63,20 +63,34 @@
             android:inputType="numberDecimal"
             android:drawableLeft="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="20dp"/>
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/season_info"
-            android:layout_below="@id/id_info"
-            android:background="#30ffffff"
-            android:hint="@string/season_ex_2018_19"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:layout_margin="10dp"
-            android:padding="20dp"
+            android:layout_below="@+id/id_info"
+            android:hint="Sessions"
 
-            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-            android:drawablePadding="20dp"/>
+            android:background="#30ffffff"
+            android:textColorHint="@color/white"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            tools:ignore="ExtraText">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/filled_exposed"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="#30ffffff"
+
+                >
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,25 +120,59 @@
             android:drawableLeft="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="20dp"
             android:inputType="textEmailAddress"/>
+
         <EditText
+            android:id="@+id/homeTown_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/homeTown_info"
             android:layout_below="@id/email_info"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="#30ffffff"
-            android:hint="Home Town"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:layout_margin="10dp"
-            android:padding="20dp"
             android:drawableLeft="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="20dp"
-            android:inputType="text"/>
+            android:hint="Home Town"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BloodGroupId"
+            android:layout_below="@id/homeTown_info"
+            android:hint="Blood Group"
+
+            android:background="#30ffffff"
+            android:textColorHint="@color/white"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            tools:ignore="ExtraText">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/filled_exposed2"
+                android:inputType="none"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="#30ffffff"
+
+                >
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/service_info"
-            android:layout_below="@id/homeTown_info"
+            android:layout_below="@id/BloodGroupId"
             android:background="#30ffffff"
             android:hint="Service"
             android:textColorHint="@color/white"
@@ -138,12 +186,12 @@
 
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_centerHorizontal="true"
-            android:background="#97C1BD"
+            android:background="#00BCD4"
             android:textColor="#fff"
             android:id="@+id/submitID_info"
             android:textSize="25sp"

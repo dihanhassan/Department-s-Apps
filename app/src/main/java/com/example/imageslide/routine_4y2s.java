@@ -26,13 +26,7 @@ public class routine_4y2s extends AppCompatActivity {
         setContentView(R.layout.activity_routine4y2s);
 
         // Tool Bar
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout_r4y2sID);
-        navigationView = (NavigationView) findViewById(R.id.navigatio_r4y2sID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBar_r4y2sID);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
 
         // webView
         webView = (WebView) findViewById(R.id.webView_4y2s_ID);

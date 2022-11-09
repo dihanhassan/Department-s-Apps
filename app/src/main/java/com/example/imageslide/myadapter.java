@@ -43,7 +43,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         return new myviewholder(view);
     }
 
-    class myviewholder extends RecyclerView.ViewHolder{
+    static class myviewholder extends RecyclerView.ViewHolder{
 
         TextView name,id,season,mobile,email,home,service;
         public myviewholder(@NonNull View itemView) {

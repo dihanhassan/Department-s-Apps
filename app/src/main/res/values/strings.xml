@@ -49,5 +49,8 @@
     <string name="verify">Verify</string>
     <string name="_1st_batch">1st Batch</string>
     <string name="season_ex_2018_19">Season [Ex. 2018-19]</string>
+    <string name="feedback">FeedBack</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
 
 </resources>
