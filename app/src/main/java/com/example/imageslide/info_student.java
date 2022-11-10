@@ -8,6 +8,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -43,7 +44,7 @@ public class info_student extends AppCompatActivity {
     EditText name,id,mobile,email,homeTown,service;
     //EditText BloodGroup;
     Button submit;
-
+    Button skip;
 
 
     DatabaseReference databaseReference ;
@@ -119,9 +120,17 @@ public class info_student extends AppCompatActivity {
         homeTown = (EditText) findViewById(R.id.homeTown_info);
         service = (EditText) findViewById(R.id.service_info);
         submit = (Button) findViewById(R.id.submitID_info);
+        skip = (Button) findViewById(R.id.SkipID_info);
     //    BloodGroup = (EditText) findViewById(R.id.BloodGroupId);
 
-
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(info_student.this, "Skiped.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(info_student.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         final String[] selected = new String[2];
@@ -294,17 +303,23 @@ public class info_student extends AppCompatActivity {
 
                     Toast.makeText(info_student.this, "Submited Successfully.", Toast.LENGTH_SHORT).show();
 
+                    name.setText("");
+                    id.setText("");
+                    mobile.setText("");
+                    email.setText("");
+                    homeTown.setText("");
+                    service.setText("");
+
+
+
+                    Intent intent = new Intent(info_student.this,MainActivity.class);
+                    startActivity(intent);
+
+
                 }
 
 
 
-
-                name.setText("");
-                id.setText("");
-                mobile.setText("");
-                email.setText("");
-                homeTown.setText("");
-                service.setText("");
 
 
 
@@ -315,15 +330,26 @@ public class info_student extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
 
-
-
-
-
-    public void infoCollectionBack (View view){
-        Intent intent = new Intent(info_student.this,afterStudent.class);
-        startActivity(intent);
     }
+
+    //    public void infoCollectionBack (View view){
+//
+//        SharedPreferences preferences = getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+//
+//        String FristTime = preferences.getString("FirstTimeInstall","");
+//
+//        if (FristTime.equals("Yes")){
+//            Toast.makeText(this, "Submit you info.", Toast.LENGTH_SHORT).show();
+//        }else{
+//            Intent intent = new Intent(info_student.this,afterStudent.class);
+//            startActivity(intent);
+//        }
+//
+//
+//    }
 
 
 
