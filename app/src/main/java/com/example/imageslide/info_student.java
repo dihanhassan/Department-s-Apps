@@ -246,6 +246,7 @@ public class info_student extends AppCompatActivity {
 
                     }
 
+                    databaseReference.keepSynced(true);
 
                     dataholder info = new dataholder(Name, Id, Season, Mobile, Email, HomeTown, Service);
 
@@ -286,6 +287,7 @@ public class info_student extends AppCompatActivity {
 
                     }
 
+                    databaseReference2.keepSynced(true);
                     dataHolderForBlood info2 = new dataHolderForBlood(Name, Id, Season, Mobile, Blood);
 
                     databaseReference2.child(Id).setValue(info2);

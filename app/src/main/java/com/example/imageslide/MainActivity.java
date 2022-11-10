@@ -2,6 +2,7 @@ package com.example.imageslide;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -9,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
@@ -75,12 +77,14 @@ public class MainActivity extends AppCompatActivity  {
         // Slide Menu
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
-
+        navigationView = (NavigationView) findViewById(R.id.MainnavigationID);
         toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarID);
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+
 
 
 
@@ -96,7 +100,10 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        
+    }
 
     public  void optinons_menu(View view){
         Intent intent;
@@ -132,8 +139,9 @@ public class MainActivity extends AppCompatActivity  {
             intent = new Intent(MainActivity.this,afterStudent.class);
             startActivity(intent);
         }
-        if (view.getId()==R.id.cardViewBloodAboutID){
-
+        if (view.getId()==R.id.cardViewMoreID){
+            intent = new Intent(MainActivity.this,More.class);
+            startActivity(intent);
         }
 
     }

@@ -174,7 +174,7 @@
             android:id="@+id/service_info"
             android:layout_below="@id/BloodGroupId"
             android:background="#30ffffff"
-            android:hint="Service"
+            android:hint="Service ( Company name / Student )"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:layout_margin="10dp"
