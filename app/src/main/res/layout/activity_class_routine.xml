@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".classRoutine">
 
     <LinearLayout
@@ -18,7 +19,7 @@
             android:id="@+id/toolBar_r4y2sID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/meterial_ash"
+            android:background="#273238"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:subtitleTextAppearance="?android:textAppearanceLarge"
             app:titleTextColor="@color/white">
@@ -43,19 +44,49 @@
             </TextView>
         </androidx.appcompat.widget.Toolbar>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:src="@drawable/img_class_room"
-            android:scaleType="fitXY"
-            />
+
+        <androidx.cardview.widget.CardView
+
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="5dp"
+            android:foreground="@drawable/effect"
+            app:cardBackgroundColor="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/img_class_room"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
         <GridLayout
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:rowCount="2"
             android:columnCount="2"
-            android:background="@color/white"
+            android:background="#273238"
             >
 
             <androidx.cardview.widget.CardView
@@ -100,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:text="1y 2s "
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"
@@ -152,7 +183,7 @@
                         android:layout_height="wrap_content"
                         android:text="2y 2s "
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"
@@ -204,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:text="3y 2s "
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"
@@ -256,7 +287,7 @@
                         android:layout_height="wrap_content"
                         android:text="4y 2s"
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"

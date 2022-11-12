@@ -11,7 +11,7 @@ android:elevation="5dp"
     app:cardElevation="10dp"
     android:padding="5dp"
 
-    app:cardBackgroundColor="@color/meterial_ash"
+    app:cardBackgroundColor="#273238"
 app:cardUseCompatPadding="true">
 
 <RelativeLayout

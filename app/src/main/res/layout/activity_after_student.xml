@@ -5,6 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
+
 tools:context=".afterStudent">
 
 <LinearLayout
@@ -18,7 +19,7 @@ tools:context=".afterStudent">
         android:id="@+id/toolBar_r4y2sID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/meterial_ash"
+        android:background="#273238"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:subtitleTextAppearance="?android:textAppearanceLarge"
         app:titleTextColor="@color/white">
@@ -42,18 +43,48 @@ tools:context=".afterStudent">
             >
         </TextView>
     </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/dept_of_ict_img"
-        >
 
-    </LinearLayout>
+    <androidx.cardview.widget.CardView
+
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        app:cardElevation="55dp"
+        app:cardCornerRadius="5dp"
+        android:foreground="@drawable/effect"
+        app:cardBackgroundColor="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|center_horizontal"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/dept_of_ict_img"
+                android:scaleType="fitXY"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back_back"
+        android:background="#273238"
         >
 
         <GridLayout
@@ -102,9 +133,9 @@ tools:context=".afterStudent">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Information"
+                        android:text="Student's Information"
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"
@@ -149,9 +180,9 @@ tools:context=".afterStudent">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Registration"
+                        android:text="Modify Your Info"
                         android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/meterial_cyan"
+                        android:textColor="@color/meterial_ash"
                         android:textStyle="bold"
                         android:fontFamily="serif"
                         android:layout_marginTop="1dp"

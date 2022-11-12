@@ -26,7 +26,7 @@ public class afterStudent extends AppCompatActivity {
             startActivity(intent);
         }
         if (view.getId()==R.id.cardViewRegistrationID){
-            intent = new Intent(afterStudent.this,info_student.class);
+            intent = new Intent(afterStudent.this,Modify_info.class);
             startActivity(intent);
         }
     }

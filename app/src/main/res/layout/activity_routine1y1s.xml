@@ -20,7 +20,7 @@
             android:id="@+id/toolBar_r4y2sID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/meterial_ash"
+            android:background="#273238"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:subtitleTextAppearance="?android:textAppearanceLarge"
             app:titleTextColor="@color/white">
