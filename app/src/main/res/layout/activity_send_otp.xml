@@ -18,7 +18,7 @@
             android:layout_height="130dp"
             android:layout_marginTop="80dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/send"
+            android:src="@drawable/send2"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -79,20 +79,20 @@
                 android:gravity="center"
                 android:text="+880 - "
                 android:textColor="@color/colorTextPrimary"
-                android:textSize="16sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
 
                 />
             <EditText
                 android:id="@+id/inputMobile"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:hint="1234567891"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/colorTextPrimary"
-                android:textSize="16sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 />
 
