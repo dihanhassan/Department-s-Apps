@@ -26,7 +26,7 @@
             android:layout_marginTop="30dp"
             android:text="@string/otp_verification"
             android:textColor="@color/colorTextPrimary"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
@@ -61,8 +61,8 @@
             android:layout_marginEnd="30dp"
             android:gravity="center"
             android:text="@string/input_mobile"
-            android:textColor="@color/colorTextSecondary"
-            android:textSize="16sp"
+            android:textColor="@color/meterial_ash"
+            android:textSize="25sp"
 
             />
         <LinearLayout
@@ -78,7 +78,7 @@
                 android:layout_height="40dp"
                 android:gravity="center"
                 android:text="+880 - "
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/meterial_deep_purple"
                 android:textSize="25sp"
                 android:textStyle="bold"
 
@@ -87,13 +87,14 @@
                 android:id="@+id/inputMobile"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:hint="1234567891"
+                android:hint="xxxxxxxx"
+                android:textColorHint="@color/meterial_deep_purple"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="number"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/meterial_deep_purple"
                 android:textSize="25sp"
-                android:textStyle="bold"
+
                 />
 
         </LinearLayout>
