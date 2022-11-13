@@ -19,10 +19,15 @@ public class More extends AppCompatActivity {
     public void showMore (View view){
 
         Intent intent;
+        if (view.getId()==R.id.cardViewMore_1_ID){
+            intent = new Intent(More.this,AboutDeb.class);
+            startActivity(intent);
+        }
         if (view.getId()==R.id.cardViewMore_2_ID){
             intent = new Intent(More.this,BugReport.class);
             startActivity(intent);
         }
+
 
     }
 

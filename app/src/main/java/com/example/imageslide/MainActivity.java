@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -21,7 +22,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -32,12 +32,12 @@ import com.onesignal.OneSignal;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     ImageSlider imageSlider;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    androidx.appcompat.widget.Toolbar toolbar;
+    Toolbar toolbar;
     CardView Bus,Teacher;
 
     private static final String ONESIGNAL_APP_ID = "0dc45e20-8423-40e8-8a7f-9e0c54770757";
@@ -77,12 +77,14 @@ public class MainActivity extends AppCompatActivity  {
         // Slide Menu
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
-        navigationView = (NavigationView) findViewById(R.id.MainnavigationID);
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolBarID);
+        navigationView = (NavigationView) findViewById(R.id.NavigationViewID);
+        toolbar = (Toolbar) findViewById(R.id.toolBarID);
         setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigration_open, R.string.navigration_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, toolbar, R.string.navigration_open,R.string.navigration_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener( this);
 
 
 
@@ -145,6 +147,46 @@ public class MainActivity extends AppCompatActivity  {
         }
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.slide_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.contactUsID){
+            Toast.makeText(this, "Contact is clicked", Toast.LENGTH_SHORT).show();
+        }
+        else if (item.getItemId()==R.id.RateID){
+            Toast.makeText(this, "Rate is clicked", Toast.LENGTH_SHORT).show();
+        }
+        if (item.getItemId()==R.id.ShareID){
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT,"ICT MBSTU OFFICIAL APPS");
+            intent.putExtra(Intent.EXTRA_TEXT,"ICT MBSTU OFFICIAL APPS LINK: https://drive.google.com/drive/u/0/folders/1H6u3aC4M-HnGaEN5W-K1FW6PSLYJdmC5");
+            startActivity(Intent.createChooser(intent,"Share Via"));
+        }
+        if (item.getItemId()==R.id.BugReportID){
+            Intent intent = new Intent(MainActivity.this,BugReport.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Toast.makeText(this, "Select ", Toast.LENGTH_SHORT).show();
+        if (item.getItemId()==R.id.contactUsID){
+            Intent intent = new Intent(MainActivity.this,BussSchedule.class);
+            startActivity(intent);
+            Toast.makeText(this, "Contact is clicked", Toast.LENGTH_SHORT).show();
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return false;
+    }
 }

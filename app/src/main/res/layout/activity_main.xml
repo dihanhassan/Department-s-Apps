@@ -6,20 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/drawerLayoutID"
+
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
+
+    tools:context=".MainActivity"
+    android:id="@+id/drawerLayoutID"
+
 
     >
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/MainnavigationID"
+        android:id="@+id/NavigationViewID"
+        android:layout_gravity="start"
         app:headerLayout="@layout/slide_menu_header"
         app:menu="@menu/slide_menu"
-        android:layout_gravity="start" />
+        >
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 
@@ -29,10 +35,14 @@
         android:orientation="vertical">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBarID"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+
             android:background="@color/meterial_deep_blue"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="5dp"
             app:title="ICT MBSTU"
             app:titleTextColor="@color/white"
             app:subtitleTextAppearance="?android:textAppearanceLarge"

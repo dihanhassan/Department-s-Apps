@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+        <item
+            android:id="@+id/contactUsID"
+            android:icon="@drawable/menu_contact_icon"
+            android:title="@string/menu_8"
+
+            />
+
+        <item android:id="@+id/RateID"
+            android:title="@string/rate_us"
+            android:icon="@drawable/menu_rate"
+            />
+
+    <item android:id="@+id/BugReportID"
+        android:title="Report Bug"
+        android:icon="@drawable/bug_icon"
+        />
+
+    <item android:id="@+id/ShareID"
+        android:title="@string/share"
+        android:icon="@drawable/menu_share"
+        />
 
 
 
 
-    <group android:checkableBehavior="single">
-        <item android:title="">
-            <menu>
-                <item android:id="@+id/ShareID"
-                    android:title="@string/share"
-                    android:icon="@drawable/menu_share"
-                    />
-                <item android:id="@+id/FeedbackID"
-                    android:title="@string/feedback"
-                    android:icon="@drawable/menu_feedback"
-                    />
-                <item android:id="@+id/RateID"
-                    android:title="@string/rate_us"
-                    android:icon="@drawable/menu_rate"
-                    />
-                <item
-                    android:id="@+id/contactUsID"
-                    android:icon="@drawable/menu_contact_icon"
-                    android:title="@string/menu_8"
-                    />
-            </menu>
-
-
-        </item>
-
-    </group>
 
 
 
